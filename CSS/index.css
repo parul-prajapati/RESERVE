@@ -1,0 +1,250 @@
+body {
+  font-family: "Inter" !important;
+}
+.container {
+  height: 100vh;
+}
+.navbar-container {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  background: yellow;
+}
+.search-containers {
+  display: flex;
+  height: 40em;
+  width: 100%;
+  background-image: url("../Media/Images/backgroundLogo.svg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.journey-container {
+  display: flex;
+  height: 35em;
+  width: 100%;
+  justify-content: space-between;
+  /* background: lemonchiffon; */
+}
+.card-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.card-item-container {
+  display: flex;
+  column-gap: 20px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+.card {
+  height: 300px;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+  border: 1px solid #e2e2e2;
+  box-shadow: 2px 2px 18px rgba(0, 0, 0, 0.25);
+}
+.feedback-container {
+  display: flex;
+  height: 20em;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  background: #f7f7f7;
+}
+.footer-container {
+  display: flex;
+  height: 15em;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.logo {
+  font-size: xx-large;
+  font-weight: bolder;
+  color: orange;
+}
+
+.ui.menu .item:before {
+  width: 0px;
+}
+.ui.segment {
+  padding: 0px;
+}
+.card-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 39px;
+  letter-spacing: 0.04em;
+  color: #000000;
+}
+.cardBottomText {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+  text-align: center;
+  color: #000000;
+  padding: 3px 0px 0px 20px;
+}
+.HighlightedCardBottomText {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 100;
+  font-size: 15px;
+  text-align: center;
+  color: #a3a3a3;
+}
+.feedback-card {
+  height: 200px;
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+  border: 1px solid #e2e2e2;
+  box-shadow: 2px 2px 18px rgba(0, 0, 0, 0.25);
+}
+.show-circle {
+  height: 50px;
+  width: 50px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 30px;
+  color: #ffffff;
+}
+.feedback-item-container {
+  display: flex;
+  flex: 1;
+}
+.rating {
+  width: 60px;
+  height: 30px;
+  background: #60b581;
+  border-radius: 8px;
+  color: white;
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  margin: 10px 0px 0px 0px;
+}
+.feedbackText {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 28px;
+  color: #a3a3a3;
+}
+.right-container {
+  display: flex;
+  flex: 1;
+  margin: 30px;
+}
+.about-us {
+  display: FLEX;
+  flex: 1;
+  flex-direction: column;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 29px;
+  color: #000000;
+}
+.link-text {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+
+  color: #4d4d4d;
+}
+.selector {
+  width: 70%;
+  display: grid;
+  grid-template-columns: 33.33% 33.33% 33.33%;
+  min-height: 80px;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  background-color: white;
+}
+
+.dropdown-content {
+  position: absolute;
+  background-color: #f1f1f1;
+  width: 25%;
+  overflow: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  float: right;
+}
+
+.selector > div {
+  padding: 10px;
+}
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+input {
+  background-color: white;
+}
+
+input:focus-visible {
+  border: none;
+}
+.dropdown-container {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: flex-end;
+  flex-direction: column;
+  margin-bottom: 75px;
+}
+#dropdownSlicedText-From,
+#dropdownSlicedText-To {
+  font-family: sans-serif;
+  font-style: normal;
+  font-size: 14px;
+}
+#dropdownText-From,
+#dropdownText-To,
+#travelDate {
+  font-family: sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 34px;
+}
+.highlight-text {
+  display: flex;
+  justify-content: center;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+}
+.image-container {
+  height: 200px;
+  width: 295px;
+}
