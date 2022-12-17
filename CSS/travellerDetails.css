@@ -1,0 +1,125 @@
+.ui.selection.dropdown {
+  min-width: auto;
+}
+
+.details {
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 20px 30px 30px 30px;
+}
+
+.passenger,
+.seat {
+  display: inline-block;
+  margin: 10px 10px 20px 0px;
+  font-weight: bolder;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+  color: #000000;
+}
+
+.booking-details {
+  display: flex;
+  width: 100%;
+}
+
+.state-name:nth-child(odd) {
+  text-align: left;
+}
+
+.state-container {
+  display: grid;
+  grid-template-areas: ". .";
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  color: #4d4d4d;
+  font-size: 14px;
+  line-height: 17px;
+  margin-top: 10px;
+  width: 73%;
+}
+
+.userSelection {
+  display: grid;
+  grid-template-columns: 80% 20%;
+  width: 80%;
+  margin: 2% 9% 2% 9%;
+  column-gap: 2%;
+  height: 39em;
+}
+
+.busFare {
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 20px;
+  height: fit-content;
+}
+
+.fare:nth-child(even) {
+  text-align: right;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.fare:nth-child(odd) {
+  text-align: left;
+}
+
+.fare-container {
+  display: grid;
+  grid-template-areas: ". .";
+  grid-gap: 15px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  color: #4d4d4d;
+  font-size: 14px;
+  line-height: 17px;
+  margin-top: 10px;
+}
+
+.travellerDetails {
+  width: 100%;
+  margin-top: 30px;
+}
+.enter-details-text {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  color: #000000;
+  margin-bottom: 10px;
+}
+.common-text-styling {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+  color: #000000;
+}
+
+.proceed-button {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+  color: #ffffff;
+  width: 100%;
+  margin-top: 20px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  background-color: #f2711c;
+  cursor: pointer;
+  padding: 0.78571429em 1.5em 0.78571429em;
+  text-align: center;
+  border-radius: 0.28571429rem;
+}

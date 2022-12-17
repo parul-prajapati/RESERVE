@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Traveller Details </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.5.0/semantic.min.css" />
+    <link rel="stylesheet" href="../CSS/index.css">
+    <link rel="stylesheet" href="../CSS/searchBus.css">
+    <link rel="stylesheet" href="../CSS/travellerDetails.css">
+</head>
+
+<body>
+    <div class="container">
+        <!-- This div Container is holding navbar code -->
+        <div class="ui segment menu" style="margin-bottom:0px">
+            <div class="ui secondary menu" style="margin-left: 150px;">
+                <img src="../Media/Images/SiteLogo.svg" style="margin:10px 10px 0px 0px" />
+                <h1 class="logo">RESERVE</h1>
+                <a style="padding:30px;color: #000000" class="common-style-text">Tickets</a>
+                <a style="padding:30px;color: #000000" class="common-style-text">Contact us</a>
+            </div>
+            <div class="right menu" style="margin-right:5%">
+                <div class="item">
+                    <span class="show-circle"></span>
+                    <div style="margin-left: 20px;" class="common-style-text">My Profile</div>
+                </div>
+            </div>
+        </div>
+        <!-- End Of navbar code -->
+
+        <div class="userSelection">
+            <div class="selectedBusInfo">
+                <!-- This section is holding selected bus details-->
+                <div class="selectedBusDetails">
+                    <div class="booking-details">
+                        <div class="bus-details-cards" style="width:100%;flex:none;height:fit-content;">
+                            <div class="card-context-container">
+                                <div class="display-flex" style="flex-direction: column;padding:30px;">
+                                    <div class="card-text-style" style="margin:0px;">
+                                        <div class="common-text-style" style="display: flex;width: 37%;">IntrCity
+                                            Smart Bus
+                                            <div class="rating" style="margin: 0px 20px;">
+                                                <img src="../Media/Images/ratingStar.svg" />
+                                                <span style="margin:10px 5px">4.5</span>
+                                            </div>
+                                            <span class="small-size-common-style anchor-style"
+                                                style="color: #A3A3A3;align-items: center;">Ratings</span>
+                                        </div>
+                                        <p class="small-size-common-style vertical-pipe" style="margin-top: 10px;">
+                                            A/C Sleeper
+                                            (2+1) <span>| </span>24
+                                            Seats Left <span>| </span> 0 Windows seat
+                                        </p>
+                                        <div class="mid-size-common-style">
+                                            <span>22:45, 16 NOV</span>
+                                            <span class="horizontal-line"></span>
+                                            <span class="distance-hour" style="margin-left:50px">07 hrs 59
+                                                min</span>
+                                            <span class="horizontal-line"></span>
+                                            <span style="margin-left:50px">06:20, 17 NOV</span>
+                                            <!-- <div> -->
+                                            <div class="state-container">
+                                                <div class="state-name">Purnea</div>
+                                                <div class="state-name">Babughat ( Kolkata)</div>
+                                                <div class="state-name" style="color: #A3A3A3;">Taxi Stand,
+                                                    Chitrabani
+                                                    Road</div>
+
+                                                <div class="state-name" style="color: #A3A3A3;">Taxi Stand,
+                                                    Chitrabani
+                                                    Road</div>
+                                                <!-- </div> -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- End of selected bus details-->
+                <!-- This section is holding traveller details form-->
+                <div class="travellerDetails">
+                    <div class="enter-details-text">Enter Traveller Details</div>
+                    <div class="ui form details">
+                        <div class="passenger">Passenger1</div>
+                        <div class="seat">Seat <span>16</span></div>
+                        <div class="three fields common-text-styling">
+                            <div class="field ">
+                                <label style="font-size: 16px;font-weight: 600">Name</label>
+                                <input type="text">
+                            </div>
+                            <div class="field" style="width:15%">
+                                <label style="font-size: 16px;font-weight: 600">Gender</label>
+                                <div class="ui selection dropdown" onclick="genderShow()">
+                                    <div id="gender"></div>
+                                    <i class="dropdown icon"></i>
+                                    <div class="menu" id="menu" onclick="selectedGender(event)">
+                                        <a class="item" data-value="male">Male</a>
+                                        <a class="item" data-value="female">Female</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="field" style="width:15%">
+                                <label style="font-size: 16px;font-weight: 600">Age (in yrs)</label>
+                                <input type="text">
+                            </div>
+
+                        </div>
+                        <div class="two fields common-text-styling" style="font-size: 16px;font-weight: 600">
+                            <div class="field" style="width:33.33%">
+                                <label style="font-size: 16px;font-weight: 600">Email ID</label>
+                                <input type="text">
+                            </div>
+                            <div class="field" style="width:20%">
+                                <label style="font-size: 16px;font-weight: 600">Mobile No</label>
+                                <input type="text">
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <!-- End of traveller details form-->
+            </div>
+            <div class="busFare">
+                <b class="common-text-styling" style="font-size: 18px;line-height: 22px;">Fair
+                    Details</b>
+                <div class="fare-container common-text-styling" style="font-weight: 500;margin-top: 20px;">
+                    <div class="fare">Base Fare</div>
+                    <div class="fare">₹ 799 </div>
+                    <div class="fare">Tax</div>
+                    <div class="fare">₹ 150</div>
+                    <div class="fare">Offer Applied </div>
+                    <div class="fare">₹ 50</div>
+                </div>
+                <hr>
+                <div class="fare-container common-text-styling">
+                    <div class="fare">Total Price</div>
+                    <div class="fare" style="font-weight: 700;font-size: 28px;line-height: 34px;">₹ 899 </div>
+                </div>
+                <div class="proceed-button">Proceed To Payment</div>
+            </div>
+
+        </div>
+
+
+        <!-- This section is holding the footer-->
+        <div style="background: #ebebeb;">
+            <div class="footer-container">
+                <div class="" style="width: 100%;display:flex">
+                    <div class="left-container" style="margin: 30px;">
+                        <img src="../Media/Images/SiteLogo.svg" style="margin:10px 10px 0px 0px" />
+                        <span class="logo">
+                            RESERVE
+                        </span>
+                        <p class="link-text">When you have a choice . Choose Reserve.</p>
+                        <p class="link-text">Reserve offers bus tickets booking through its website , IOS, and
+                            androis
+                            mobile apps for all
+                            mojnaor cities.</p>
+                        <a class="link-text">reserve.bus@reserve.com</a>
+                    </div>
+                    <div class="right-container">
+                        <div class="about-us">About
+                            <div style="display: flex;flex-direction: column;">
+                                <a class="link-text">Tickets</a>
+                                <a class="link-text">Contact us</a>
+                            </div>
+                        </div>
+                        <div class="about-us">Useful Link
+                            <div style="display: flex;flex-direction: column;">
+                                <a class="link-text">Careers</a>
+                                <a class="link-text">FAQ</a>
+                                <a class="link-text">T & C</a>
+                                <a class="link-text">Privacy Policy</a>
+                                <a class="link-text">Blog</a>
+                            </div>
+                        </div>
+                        <div class="about-us">About
+                            <div><img src="../Media/Images/instagram.svg" style="margin:10px 10px 0px 0px" />
+                                <img src="../Media/Images/facebook.png" style="margin:10px 10px 0px 0px" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="link-text" style="text-align:center;">All rights reserved - 2022 </div>
+        </div>
+        <!-- End of footer Section -->
+    </div>
+
+    <script>
+        function genderShow() {
+            document.getElementById('menu').style.display = 'block';
+        }
+
+        function selectedGender(event) {
+            event.stopPropagation();
+            document.getElementById("menu").style.display = "none";
+            document.getElementById("gender").innerHTML = event.target.innerHTML;
+        }
+    </script>
+</body>
+
+</html>

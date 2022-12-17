@@ -248,3 +248,11 @@ input:focus-visible {
   height: 200px;
   width: 295px;
 }
+.common-style-text {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  color: #000000;
+}
