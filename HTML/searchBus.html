@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Search Tickets </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.5.0/semantic.min.css" />
+    <link rel="stylesheet" href="../CSS/index.css">
+    <link rel="stylesheet" href="../CSS/searchBus.css">
+</head>
+
+<div class="container">
+    <!-- This div Container is holding navbar code -->
+    <div class="ui segment menu" style="margin-bottom:0px">
+        <div class="ui secondary menu" style="margin-left: 150px;">
+            <img src="../Media/Images/SiteLogo.svg" style="margin:10px 10px 0px 0px" />
+            <h1 class="logo">RESERVE</h1>
+            <a style="padding:30px;color: #000000">Tickets</a>
+            <a style="padding:30px;color: #000000">Contact us</a>
+        </div>
+        <div class="right menu" style="margin-right:5%">
+            <div class="item">
+                <span class="show-circle"></span>
+                <div style="margin-left: 20px;">My Profile</div>
+            </div>
+        </div>
+    </div>
+    <!-- End Of navbar code -->
+
+    <!-- This div container is holding ticket container -->
+    <div class=" ticket-container">
+        <!-- This div container is holding filter Menu container -->
+        <div class='filter-container'>
+            <div class='filterHeader'>
+                <span>Filter</span>
+                <span style="float:right;">Clear All</span>
+            </div>
+            <div class='filterMenu'>
+                <div class="filterOption">
+                    <div class="filterLabel">Departure Time</div>
+                    <input type="checkbox" name="Morning Sessions" value="Morning Sessions" class="checkbox">
+                    <label for="Morning Sessions" class="label">Morning Sessions</label><br>
+                    <input type="checkbox" name="Afternoon Sessions" value="Afternoon Sessions" class="checkbox">
+                    <label for="Afternoon Sessions" class="label">Afternoon Sessions</label><br>
+                    <input type="checkbox" name="Evening Sessions" value="Evening Sessions" class="checkbox">
+                    <label for="Evening Sessions" class="label">Evening Sessions</label><br>
+                </div>
+                <hr>
+                <div class="filterOption">
+                    <div class="filterLabel">Arrival Time</div>
+                    <input type="checkbox" name="Morning Sessions" value="Morning Sessions" class="checkbox">
+                    <label for="Morning Sessions" class="label">Morning Sessions</label><br>
+                    <input type="checkbox" name="Afternoon Sessions" value="Afternoon Sessions" class="checkbox">
+                    <label for="Afternoon Sessions" class="label">Afternoon Sessions</label><br>
+                    <input type="checkbox" name="Evening Sessions" value="Evening Sessions" class="checkbox">
+                    <label for="Evening Sessions" class="label">Evening Sessions</label><br>
+                </div>
+                <hr>
+                <div class="filterOption">
+                    <div class="filterLabel">Pickup Point
+                        <i class="dropdown icon" style="float:right;"></i>
+                    </div>
+                    <i class="search icon"></i>
+                    <input type="text" id="searchBox" class="search-box" />
+                    <input type="radio" name="Kolkata" value="Kolkata" class="radio">
+                    <label for="Kolkata" class="label">Kolkata</label><br>
+                    <input type="radio" name="Mumbai" value="Mumbai" class="radio">
+                    <label for="Mumbai" class="label">Mumbai</label><br>
+                    <input type="radio" name="Banglore" value="Banglore" class="radio">
+                    <label for="Banglore" class="label">Banglore</label><br>
+                </div>
+                <hr>
+                <div class="filterOption">
+                    <div class="filterLabel">Drop Point
+                        <i class="dropdown icon" style="float:right;"></i>
+                    </div>
+                    <i class="search icon"></i>
+                    <input type="text" id="searchBox" class="search-box" />
+                    <input type="radio" name="Kolkata" value="Kolkata" class="radio">
+                    <label for="Kolkata" class="label">Kolkata</label><br>
+                    <input type="radio" name="Mumbai" value="Mumbai" class="radio">
+                    <label for="Mumbai" class="label">Mumbai</label><br>
+                    <input type="radio" name="Banglore" value="Banglore" class="radio">
+                    <label for="Banglore" class="label">Banglore</label><br>
+                </div>
+                <hr>
+                <div class="filterOption">
+                    <div class="filterLabel">Bus Rating</div>
+                    <input type="checkbox" name="4 star or above" value="4 star or above" class="checkbox">
+                    <label for="4 star or above" class="label">4 star or above</label><br>
+                    <input type="checkbox" name="vehicle2" value="3 star or above" class="checkbox">
+                    <label for="3 star or above" class="label">3 star or above</label><br>
+                    <input type="checkbox" name="0-2 star" value="0-2 star" class="checkbox">
+                    <label for="0-2 star" class="label">0-2 star</label><br>
+                </div>
+                <hr>
+                <div class="filterOption">
+                    <div class="filterLabel">Bus Operator
+                        <i class="dropdown icon" style="float:right;"></i>
+                    </div>
+                    <i class="search icon"></i>
+                    <input type="search" id="searchBox" class="search-box">
+                    <input type="checkbox" name="Zing Bus" value="Zing Bus" class="checkbox">
+                    <label for="Zing Bus" class="label">Zing Bus</label><br>
+                    <input type="checkbox" name="Intercity Smart" value="Intercity Smart" class="checkbox">
+                    <label for="Intercity Smart" class="label">Intercity Smart</label><br>
+                    <input type="checkbox" name="Safar Exp" value="Safar Exp" class="checkbox">
+                    <label for="Safar Exp" class="label">Safar Exp</label><br>
+                </div>
+            </div>
+
+        </div>
+        <!-- End Of filter Menu container code -->
+        <!-- This div container is holding list of buses -->
+        <div class="bus-info-container">
+            <!-- This div container is holding Date Picker/Calendar -->
+            <div class="date-picker">
+                <div class="date-picker-wrapper">
+                    <img src="../Media/Images/leftArrow.svg" style="margin-left: 10px;" />
+                    <div class="rotate-month-text">Dec</div>
+                    <div>
+                        <div class="common-text-style">26</div>
+                        <div class="small-size-common-style"> Mon</div>
+                    </div>
+                    <div>
+                        <div class="common-text-style">27</div>
+                        <div class="small-size-common-style"> Tue</div>
+                    </div>
+                    <div class="bg-highligted-text">
+                        <div class="common-text-style" style="color: white;">28</div>
+                        <div class="small-size-common-style" style="color: white;"> Wed</div>
+                    </div>
+                    <div>
+                        <div class="common-text-style">29</div>
+                        <div class="small-size-common-style"> Thu</div>
+                    </div>
+                    <div>
+                        <div class="common-text-style">30</div>
+                        <div class="small-size-common-style"> Fri</div>
+                    </div>
+                    <div>
+                        <div class="common-text-style">31</div>
+                        <div class="small-size-common-style"> Sat</div>
+                    </div>
+                    <img src="../Media/Images/rightArrow.svg" style="margin-right: 10px;" />
+                </div>
+            </div>
+            <!-- End Of filter Date Picker/Calendar code -->
+            <!-- This div container is holding Bus details -->
+            <div class="card-info-container">
+                <div class="bus-details-cards">
+                    <div class="card-context-container">
+                        <div class="display-flex" style="flex-direction: column;">
+                            <div class="card-text-style">
+                                <div class="common-text-style" style="display: flex;width: 37%;">IntrCity Smart Bus
+                                    <div class="rating" style="margin: 0px 20px;">
+                                        <img src="../Media/Images/ratingStar.svg" />
+                                        <span style="margin:10px 5px">4.5</span>
+                                    </div>
+                                    <span class="small-size-common-style anchor-style"
+                                        style="color: #A3A3A3;align-items: center;">Ratings</span>
+                                </div>
+                                <p class="small-size-common-style vertical-pipe" style="margin-top: 10px;">
+                                    A/C Sleeper
+                                    (2+1) <span>| </span>24
+                                    Seats Left <span>| </span> 0 Windows seat
+                                </p>
+                                <div class="mid-size-common-style">
+                                    <span>22:45, 16 NOV</span>
+                                    <span class="horizontal-line"></span>
+                                    <span class="distance-hour" style="margin-left:50px">07 hrs 59
+                                        min</span>
+                                    <span class="horizontal-line"></span>
+                                    <span style="margin-left:50px">06:20, 17 NOV</span>
+                                </div>
+                                <div class="small-size-common-style anchor-style" style="color: #3D8AF7;">
+                                    <a>Live Tracking</a>
+                                    <a>Policies</a>
+                                    <a>Photos</a>
+                                    <a>Amenities</a>
+                                    <a>Reviews</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-right-container">
+                            <div class="display-flex" style="flex-direction: column;">
+                                <div class="card-text-style" style="align-items: center;gap: 10px;">
+                                    <div class="trip-cost-text">Trip Cost</div>
+                                    <div class="small-size-common-style" style="color: #A3A3A3;">starting
+                                        from</div>
+                                    <div class="rupees-text">₹ 899</div>
+                                    <div class="ui orange button distance-hour large">View Seat</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bus-details-cards">
+                    <div class="card-context-container">
+                        <div class="display-flex" style="flex-direction: column;">
+                            <div class="card-text-style">
+                                <div class="common-text-style" style="display: flex;width: 37%;">IntrCity
+                                    Smart Bus
+                                    <div class="rating" style="margin: 0px 20px;">
+                                        <img src="../Media/Images/ratingStar.svg" />
+                                        <span style="margin:10px 5px">4.5</span>
+                                    </div>
+                                    <span class="small-size-common-style anchor-style"
+                                        style="color: #A3A3A3;align-items: center;">Ratings</span>
+                                </div>
+                                <p class="small-size-common-style vertical-pipe" style="margin-top: 10px;">
+                                    A/C Sleeper
+                                    (2+1) <span>| </span>24
+                                    Seats Left <span>| </span> 0 Windows seat
+                                </p>
+                                <div class="mid-size-common-style">
+                                    <span>22:45, 16 NOV</span>
+                                    <span class="horizontal-line"></span>
+                                    <span class="distance-hour" style="margin-left:50px">07 hrs 59
+                                        min</span>
+                                    <span class="horizontal-line"></span>
+                                    <span style="margin-left:50px">06:20, 17 NOV</span>
+                                </div>
+                                <div class="small-size-common-style anchor-style" style="color: #3D8AF7;">
+                                    <a>Live Tracking</a>
+                                    <a>Policies</a>
+                                    <a>Photos</a>
+                                    <a>Amenities</a>
+                                    <a>Reviews</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-right-container">
+                            <div class="display-flex" style="flex-direction: column;">
+                                <div class="card-text-style" style="align-items: center;gap: 10px;">
+                                    <div class="trip-cost-text">Trip Cost</div>
+                                    <div class="small-size-common-style" style="color: #A3A3A3;">starting
+                                        from</div>
+                                    <div class="rupees-text">₹ 899</div>
+                                    <div class="ui orange button distance-hour large">View Seat</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="bus-details-cards">
+                    <div class="card-context-container">
+                        <div class="display-flex" style="flex-direction: column;">
+                            <div class="card-text-style">
+                                <div class="common-text-style" style="display: flex;width: 37%;">IntrCity
+                                    Smart Bus
+                                    <div class="rating" style="margin: 0px 20px;">
+                                        <img src="../Media/Images/ratingStar.svg" />
+                                        <span style="margin:10px 5px">4.5</span>
+                                    </div>
+                                    <span class="small-size-common-style anchor-style"
+                                        style="color: #A3A3A3;align-items: center;">Ratings</span>
+                                </div>
+                                <p class="small-size-common-style vertical-pipe" style="margin-top: 10px;">
+                                    A/C Sleeper
+                                    (2+1) <span>| </span>24
+                                    Seats Left <span>| </span> 0 Windows seat
+                                </p>
+                                <div class="mid-size-common-style">
+                                    <span>22:45, 16 NOV</span>
+                                    <span class="horizontal-line"></span>
+                                    <span class="distance-hour" style="margin-left:50px">07 hrs 59
+                                        min</span>
+                                    <span class="horizontal-line"></span>
+                                    <span style="margin-left:50px">06:20, 17 NOV</span>
+                                </div>
+                                <div class="small-size-common-style anchor-style" style="color: #3D8AF7;">
+                                    <a>Live Tracking</a>
+                                    <a>Policies</a>
+                                    <a>Photos</a>
+                                    <a>Amenities</a>
+                                    <a>Reviews</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-right-container">
+                            <div class="display-flex" style="flex-direction: column;">
+                                <div class="card-text-style" style="align-items: center;gap: 10px;">
+                                    <div class="trip-cost-text">Trip Cost</div>
+                                    <div class="small-size-common-style" style="color: #A3A3A3;">starting
+                                        from</div>
+                                    <div class="rupees-text">₹ 899</div>
+                                    <div class="ui orange button distance-hour large">View Seat</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="bus-details-cards">
+                    <div class="card-context-container">
+                        <div class="display-flex" style="flex-direction: column;">
+                            <div class="card-text-style">
+                                <div class="common-text-style" style="display: flex;width: 37%;">IntrCity
+                                    Smart Bus
+                                    <div class="rating" style="margin: 0px 20px;">
+                                        <img src="../Media/Images/ratingStar.svg" />
+                                        <span style="margin:10px 5px">4.5</span>
+                                    </div>
+                                    <span class="small-size-common-style anchor-style"
+                                        style="color: #A3A3A3;align-items: center;">Ratings</span>
+                                </div>
+                                <p class="small-size-common-style vertical-pipe" style="margin-top: 10px;">
+                                    A/C Sleeper
+                                    (2+1) <span>| </span>24
+                                    Seats Left <span>| </span> 0 Windows seat
+                                </p>
+                                <div class="mid-size-common-style">
+                                    <span>22:45, 16 NOV</span>
+                                    <span class="horizontal-line"></span>
+                                    <span class="distance-hour" style="margin-left:50px">07 hrs 59
+                                        min</span>
+                                    <span class="horizontal-line"></span>
+                                    <span style="margin-left:50px">06:20, 17 NOV</span>
+                                </div>
+                                <div class="small-size-common-style anchor-style" style="color: #3D8AF7;">
+                                    <a>Live Tracking</a>
+                                    <a>Policies</a>
+                                    <a>Photos</a>
+                                    <a>Amenities</a>
+                                    <a>Reviews</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-right-container">
+                            <div class="display-flex" style="flex-direction: column;">
+                                <div class="card-text-style" style="align-items: center;gap: 10px;">
+                                    <div class="trip-cost-text">Trip Cost</div>
+                                    <div class="small-size-common-style" style="color: #A3A3A3;">starting
+                                        from</div>
+                                    <div class="rupees-text">₹ 899</div>
+                                    <div class="ui orange button distance-hour large">View Seat</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="bus-details-cards">
+                    <div class="card-context-container">
+                        <div class="display-flex" style="flex-direction: column;">
+                            <div class="card-text-style">
+                                <div class="common-text-style" style="display: flex;width: 37%;">IntrCity
+                                    Smart Bus
+                                    <div class="rating" style="margin: 0px 20px;">
+                                        <img src="../Media/Images/ratingStar.svg" />
+                                        <span style="margin:10px 5px">4.5</span>
+                                    </div>
+                                    <span class="small-size-common-style anchor-style"
+                                        style="color: #A3A3A3;align-items: center;">Ratings</span>
+                                </div>
+                                <p class="small-size-common-style vertical-pipe" style="margin-top: 10px;">
+                                    A/C Sleeper
+                                    (2+1) <span>| </span>24
+                                    Seats Left <span>| </span> 0 Windows seat
+                                </p>
+                                <div class="mid-size-common-style">
+                                    <span>22:45, 16 NOV</span>
+                                    <span class="horizontal-line"></span>
+                                    <span class="distance-hour" style="margin-left:50px">07 hrs 59
+                                        min</span>
+                                    <span class="horizontal-line"></span>
+                                    <span style="margin-left:50px">06:20, 17 NOV</span>
+                                </div>
+                                <div class="small-size-common-style anchor-style" style="color: #3D8AF7;">
+                                    <a>Live Tracking</a>
+                                    <a>Policies</a>
+                                    <a>Photos</a>
+                                    <a>Amenities</a>
+                                    <a>Reviews</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-right-container">
+                            <div class="display-flex" style="flex-direction: column;">
+                                <div class="card-text-style" style="align-items: center;gap: 10px;">
+                                    <div class="trip-cost-text">Trip Cost</div>
+                                    <div class="small-size-common-style" style="color: #A3A3A3;">starting
+                                        from</div>
+                                    <div class="rupees-text">₹ 899</div>
+                                    <div class="ui orange button distance-hour large">View Seat</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="bus-details-cards">
+                    <div class="card-context-container">
+                        <div class="display-flex" style="flex-direction: column;">
+                            <div class="card-text-style">
+                                <div class="common-text-style" style="display: flex;width: 37%;">IntrCity
+                                    Smart Bus
+                                    <div class="rating" style="margin: 0px 20px;">
+                                        <img src="../Media/Images/ratingStar.svg" />
+                                        <span style="margin:10px 5px">4.5</span>
+                                    </div>
+                                    <span class="small-size-common-style anchor-style"
+                                        style="color: #A3A3A3;align-items: center;">Ratings</span>
+                                </div>
+                                <p class="small-size-common-style vertical-pipe" style="margin-top: 10px;">
+                                    A/C Sleeper
+                                    (2+1) <span>| </span>24
+                                    Seats Left <span>| </span> 0 Windows seat
+                                </p>
+                                <div class="mid-size-common-style">
+                                    <span>22:45, 16 NOV</span>
+                                    <span class="horizontal-line"></span>
+                                    <span class="distance-hour" style="margin-left:50px">07 hrs 59
+                                        min</span>
+                                    <span class="horizontal-line"></span>
+                                    <span style="margin-left:50px">06:20, 17 NOV</span>
+                                </div>
+                                <div class="small-size-common-style anchor-style" style="color: #3D8AF7;">
+                                    <a>Live Tracking</a>
+                                    <a>Policies</a>
+                                    <a>Photos</a>
+                                    <a>Amenities</a>
+                                    <a>Reviews</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-right-container">
+                            <div class="display-flex" style="flex-direction: column;">
+                                <div class="card-text-style" style="align-items: center;gap: 10px;">
+                                    <div class="trip-cost-text">Trip Cost</div>
+                                    <div class="small-size-common-style" style="color: #A3A3A3;">starting
+                                        from</div>
+                                    <div class="rupees-text">₹ 899</div>
+                                    <div class="ui orange button distance-hour large">View Seat</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <!-- End Of Bus details code -->
+        </div>
+        <!-- End Of bus Info container code -->
+    </div>
+
+
+    <!-- This section is holding the footer-->
+    <div style="background: #ebebeb;">
+        <div class="footer-container">
+            <div class="" style="width: 100%;display:flex">
+                <div class="left-container" style="margin: 30px;">
+                    <img src="../Media/Images/SiteLogo.svg" style="margin:10px 10px 0px 0px" />
+                    <span class="logo">
+                        RESERVE
+                    </span>
+                    <p class="link-text">When you have a choice . Choose Reserve.</p>
+                    <p class="link-text">Reserve offers bus tickets booking through its website , IOS, and
+                        androis
+                        mobile apps for all
+                        mojnaor cities.</p>
+                    <a class="link-text">reserve.bus@reserve.com</a>
+                </div>
+                <div class="right-container">
+                    <div class="about-us">About
+                        <div style="display: flex;flex-direction: column;">
+                            <a class="link-text">Tickets</a>
+                            <a class="link-text">Contact us</a>
+                        </div>
+                    </div>
+                    <div class="about-us">Useful Link
+                        <div style="display: flex;flex-direction: column;">
+                            <a class="link-text">Careers</a>
+                            <a class="link-text">FAQ</a>
+                            <a class="link-text">T & C</a>
+                            <a class="link-text">Privacy Policy</a>
+                            <a class="link-text">Blog</a>
+                        </div>
+                    </div>
+                    <div class="about-us">About
+                        <div><img src="../Media/Images/instagram.svg" style="margin:10px 10px 0px 0px" />
+                            <img src="../Media/Images/facebook.png" style="margin:10px 10px 0px 0px" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="link-text" style="text-align:center;">All rights reserved - 2022 </div>
+    </div>
+    <!-- End of footer Section -->
+</div>
+<script>
+
+</script>
+
+</body>
+
+</html>
