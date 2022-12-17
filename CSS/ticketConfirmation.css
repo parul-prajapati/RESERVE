@@ -1,0 +1,115 @@
+.ticket-confirmation-container {
+  display: flex;
+  height: 50em;
+  flex-direction: column;
+}
+.ticket-card-container {
+  background: #ffffff;
+  box-shadow: 2px 2px 19px rgb(0 0 0 / 14%);
+  border-radius: 12px;
+  width: 920px;
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+  border: 1px solid #e2e2e2;
+  box-shadow: 2px 2px 18px rgba(0, 0, 0, 0.25);
+}
+.ticket-card {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: column;
+}
+.booking-text {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 44px;
+  color: #000000;
+}
+.ticket-details-text {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  color: #4d4d4d;
+}
+.ticket-id {
+  display: flex;
+  justify-content: space-evenly;
+  column-gap: 10px;
+}
+.display-flex-direction {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+.upper-ticket-container {
+  display: flex;
+  flex: 1;
+}
+.lower-ticket-container {
+  display: flex;
+  flex: 1;
+}
+.grid-container {
+  display: grid;
+  grid-template-areas: ". .";
+  column-gap: 10px;
+  padding: 10px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  color: #4d4d4d;
+}
+
+.grid-container > div {
+  text-align: center;
+  padding: 10px;
+}
+
+.item:nth-child(even) {
+  text-align: left;
+}
+
+.item:nth-child(odd) {
+  text-align: right;
+}
+.inner-grid {
+  align-items: center;
+  justify-content: flex-end;
+  margin-top: 50px;
+}
+.booking-details {
+  display: flex;
+  width: 100%;
+  margin: 30px;
+  justify-content: center;
+  align-items: center;
+}
+.state-name:nth-child(odd) {
+  text-align: left;
+}
+.state-container {
+  display: grid;
+  grid-template-areas: ". .";
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  color: #4d4d4d;
+  font-size: 14px;
+  line-height: 17px;
+  margin-top: 10px;
+}
+.profile-text {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  color: #000000;
+}
