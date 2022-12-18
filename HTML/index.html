@@ -4,12 +4,16 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Bus Management System </title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- semantic CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.5.0/semantic.min.css" />
     <link rel="stylesheet" href="../CSS/index.css">
 </head>
 
 <body>
-    <div class="container">
+    <div class="container-fluid">
         <!-- This div Container is holding navbar code -->
         <div class="ui segment menu" style="margin-bottom:0px">
             <div class="ui secondary menu" style="margin-left: 150px;">
@@ -30,37 +34,42 @@
         <!-- End Of navbar code -->
 
         <!-- This div container is holding dropdown or search container -->
-        <div class="search-containers">
+        <div class="d-flex search-containers">
             <div class="dropdown-container">
                 <div class="selector">
-                    <div style="border-right:1px solid lightgray;">
-                        <div class="text" style="color:#A3A3A3">From
-                            <i class="dropdown icon" style="float:right;" onclick="myFunction()"></i>
-                            <div id="myDropdown" class="dropdown-content" style="visibility:hidden;"
-                                onclick="myFunc(event)">
-                                <a>Delhi,New Delhi,</a>
-                                <a>Kanpur,Uttar Pradesh,</a>
-                                <a>Pune,Maharashtra,</a>
+                    <div class="dropdown">
+                        <button class="btn dropdown-toggle d-flex justify-content-between full-button p-3" type="button" id="dropdownMenuButton1"
+                            data-bs-toggle="dropdown" aria-expanded="false" data-flip="false">
+                            <span class="dropdown-text">From</span>
+                            <div class="flex-column d-flex">
+                                <div id="dropdownText-From"></div>
+                                <div id="dropdownSlicedText-From"></div>
                             </div>
-                        </div>
-                        <div id="dropdownText-From"></div>
-                        <div id="dropdownSlicedText-From"></div>
-
+                        </button>
+                        <ul class="dropdown-menu" data-display="static" data-popper-placement="bottom"
+                            aria-labelledby="dropdownMenuButton1" onclick="myFunc(event)">
+                            <li><a class="dropdown-item">Delhi,New Delhi,</a></li>
+                            <li><a class="dropdown-item">Kanpur,Uttar Pradesh</a></li>
+                            <li><a class="dropdown-item">Pune,Maharashtra,</a></li>
+                        </ul>
                     </div>
-                    <div>
-                        <div class="text" style="color:#A3A3A3">To
-                            <i class="dropdown icon" style="float:right;" onclick="myFunction2()"></i>
-                            <div id="myDropdown2" class="dropdown-content" style="visibility:hidden;"
-                                onclick="myFunc2(event)">
-                                <a>Delhi,New Delhi,</a>
-                                <a>Kanpur,Uttar Pradesh,</a>
-                                <a>Pune,Maharashtra,</a>
+                    <div class="dropdown">
+                        <button class="btn dropdown-toggle d-flex justify-content-between full-button p-3" type="button" id="dropdownMenuButton1"
+                            data-bs-toggle="dropdown" aria-expanded="false" data-flip="false">
+                            <span class="dropdown-text">To</span>
+                            <div class="flex-column d-flex">
+                                <div id="dropdownText-To"></div>
+                                <div id="dropdownSlicedText-To"></div>
                             </div>
-                        </div>
-                        <div id="dropdownText-To"></div>
-                        <div id="dropdownSlicedText-To"></div>
+                        </button>
+                        <ul class="dropdown-menu" data-display="static" data-popper-placement="bottom"
+                            aria-labelledby="dropdownMenuButton1" onclick="myFunc2(event)">
+                            <li><a class="dropdown-item">Delhi,New Delhi,</a></li>
+                            <li><a class="dropdown-item">Kanpur,Uttar Pradesh</a></li>
+                            <li><a class="dropdown-item">Pune,Maharashtra,</a></li>
+                        </ul>
                     </div>
-                    <div style="border-left:1px solid lightgray;">
+                    <div style="border-left:1px solid lightgray;" class="p-3">
                         <div class="text" style="color:#A3A3A3">Travel Date
                             <input type="date" id="date" style="border:none;float:right;width:18px;color:#A3A3A3"
                                 onchange="myFunction3(event)" />
@@ -74,90 +83,85 @@
         <!-- End of Search Container -->
 
         <!-- This div container is holding general Info about the bus services like collection,daily booking etc -->
-        <div class="journey-container">
-            <div class="card-container">
-                <div class="card-text">Book your journey with world largest bus platform</div>
-                <div class="card-item-container">
-                    <div class="card">
-                        <img class="image-container" src="../Media/Images/busImage.svg" />
-                        <div class="highlight-text">
-                            <div class="cardBottomText">2000+</div>
-                            <div class="HighlightedCardBottomText">bus Collection</div>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <img class="image-container" src="../Media/Images/happyFaces.svg" />
-                        <div class="highlight-text">
-                            <div class="cardBottomText">20 Million</div>
-                            <div class="HighlightedCardBottomText">happy customers globally</div>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <img class="image-container" src="../Media/Images/ticketImage.svg" />
-                        <div class="highlight-text">
-                            <div class="cardBottomText">5,000+</div>
-                            <div class="HighlightedCardBottomText">tickets booking
-                                everyday</div>
-                        </div>
+        <div class="d-flex justify-content-between flex-column">
+            <div class="card-text">Book your journey with world largest bus platform</div>
+            <div class="card-item-container d-flex justify-content-center mt-5 ">
+                <div class="card d-flex flex-column me-5 p-3">
+                    <img class="image-container" src="../Media/Images/busImage.svg" />
+                    <div class="d-flex justify-content-center align-items-center flex-grow-1 flex-column ">
+                        <div class="cardBottomText">2000+</div>
+                        <div class="HighlightedCardBottomText">bus Collection</div>
                     </div>
                 </div>
-                <div class="card-text"> Here’s what a few of our customers<br />
-                    have to say about us</div>
+                <div class="card me-5 p-3">
+                    <img class="image-container" src="../Media/Images/happyFaces.svg" />
+                    <div class="d-flex justify-content-center align-items-center flex-grow-1 flex-column ">
+                        <div class="cardBottomText">20 Million</div>
+                        <div class="HighlightedCardBottomText">happy customers globally</div>
+                    </div>
+                </div>
+                <div class="card me-5 p-3">
+                    <img class="image-container" src="../Media/Images/ticketImage.svg" />
+                    <div class="d-flex justify-content-center align-items-center flex-grow-1 flex-column ">
+                        <div class="cardBottomText">5,000+</div>
+                        <div class="HighlightedCardBottomText">tickets booking
+                            everyday</div>
+                    </div>
+                </div>
             </div>
+            
         </div>
         <!-- End of Bus Info Container -->
 
         <!-- This div container is holding feedback section of the site -->
-        <div class="feedback-container">
-            <div class="card-container">
-                <div class="card-item-container">
-                    <div class="feedback-card">
-                        <div style="margin:10px 0px 10px 10px">
-                            <div class="feedback-item-container">
-                                <span class="show-circle" style="background:#F4D4D4">V</span>
-                                <span class="cardBottomText" style="font-size:20px">Vatsal Agrawal
-                                    <p class="HighlightedCardBottomText">Customer since 2020</p>
-                                </span>
-                            </div>
-                            <div class="rating">
-                                <img src="../Media/Images/ratingStar.svg" />
-                                <span style="margin:10px 5px">4.5</span>
-                            </div>
-                            <div class="feedbackText">Awesome travel experience with reserve. Excellent staff</div>
+        <div class="card-text"> Here’s what a few of our customers<br />
+            have to say about us</div>
+        <div class="d-flex justify-content-center flex-row ">
+                <div class="feedback-card m-5 p-2">
+                    <div class="m-3">
+                        <div class="d-flex flex-grow-1">
+                            <span class="show-circle" style="background:#F4D4D4">V</span>
+                            <span class="cardBottomText" style="font-size:20px">Vatsal Agrawal
+                                <p class="HighlightedCardBottomText">Customer since 2020</p>
+                            </span>
                         </div>
-                    </div>
-                    <div class="feedback-card">
-                        <div style="margin:10px 0px 10px 10px">
-                            <div class="feedback-item-container">
-                                <span class="show-circle" style="background:#F4D4D4">V</span>
-                                <span class="cardBottomText" style="font-size:20px">Vanya Agrawal
-                                    <p class="HighlightedCardBottomText">Customer since 2019</p>
-                                </span>
-                            </div>
-                            <div class="rating">
-                                <img src="../Media/Images/ratingStar.svg" />
-                                <span style="margin:10px 5px">4.5</span>
-                            </div>
-                            <div class="feedbackText">Amazing service . Always a best time with reserve.</div>
+                        <div class="rating">
+                            <img src="../Media/Images/ratingStar.svg" />
+                            <span style="margin:10px 5px">4.5</span>
                         </div>
-                    </div>
-                    <div class="feedback-card">
-                        <div style="margin:10px 0px 10px 10px">
-                            <div class="feedback-item-container">
-                                <span class="show-circle" style="background:#C2D4E3">S</span>
-                                <span class="cardBottomText" style="font-size:20px">Seema Agrawal
-                                    <p class="HighlightedCardBottomText">Customer since 2018</p>
-                                </span>
-                            </div>
-                            <div class="rating">
-                                <img src="../Media/Images/ratingStar.svg" />
-                                <span style="margin:10px 5px">4.5</span>
-                            </div>
-                            <div class="feedbackText">Bus was clean and the journey was smooth. Reached on time.</div>
-                        </div>
+                        <div class="feedbackText">Awesome travel experience with reserve. Excellent staff</div>
                     </div>
                 </div>
-            </div>
+                <div class="feedback-card m-5 p-2">
+                    <div style="margin:10px 0px 10px 10px">
+                        <div class="d-flex flex-grow-1">
+                            <span class="show-circle" style="background:#F4D4D4">V</span>
+                            <span class="cardBottomText" style="font-size:20px">Vanya Agrawal
+                                <p class="HighlightedCardBottomText">Customer since 2019</p>
+                            </span>
+                        </div>
+                        <div class="rating">
+                            <img src="../Media/Images/ratingStar.svg" />
+                            <span style="margin:10px 5px">4.5</span>
+                        </div>
+                        <div class="feedbackText">Amazing service . Always a best time with reserve.</div>
+                    </div>
+                </div>
+                <div class="feedback-card m-5 p-2">
+                    <div style="margin:10px 0px 10px 10px">
+                        <div class="d-flex flex-grow-1">
+                            <span class="show-circle" style="background:#C2D4E3">S</span>
+                            <span class="cardBottomText" style="font-size:20px">Seema Agrawal
+                                <p class="HighlightedCardBottomText">Customer since 2018</p>
+                            </span>
+                        </div>
+                        <div class="rating">
+                            <img src="../Media/Images/ratingStar.svg" />
+                            <span style="margin:10px 5px">4.5</span>
+                        </div>
+                        <div class="feedbackText">Bus was clean and the journey was smooth. Reached on time.</div>
+                    </div>
+                </div>
         </div>
         <!-- End of feedback section -->
 
@@ -205,12 +209,17 @@
         </div>
         <!-- End of footer Section -->
     </div>
+    <!--  Bootstrap Bundle JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <!-- Internal Js -->
     <script>
         function myFunction() {
             document.getElementById("myDropdown").style.visibility = "visible";
         }
         function myFunc(event) {
-            document.getElementById("myDropdown").style.visibility = "hidden";
+            console.log(event.target);
             document.getElementById("dropdownText-From").innerHTML = event.target.innerHTML;
             document.getElementById("dropdownSlicedText-From").innerHTML = "India";
 
@@ -219,7 +228,6 @@
             document.getElementById("myDropdown2").style.visibility = "visible";
         }
         function myFunc2(event) {
-            document.getElementById("myDropdown2").style.visibility = "hidden";
             document.getElementById("dropdownText-To").innerHTML = event.target.innerHTML;
             document.getElementById("dropdownSlicedText-To").innerHTML = "India";
 
