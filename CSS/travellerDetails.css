@@ -21,11 +21,6 @@
   color: #000000;
 }
 
-.booking-details {
-  display: flex;
-  width: 100%;
-}
-
 .state-name:nth-child(odd) {
   text-align: left;
 }
@@ -83,10 +78,16 @@
   margin-top: 10px;
 }
 
+.travellerDetails label {
+  font-size: 16px;
+  font-weight: 600
+}
+
 .travellerDetails {
   width: 100%;
   margin-top: 30px;
 }
+
 .enter-details-text {
   font-family: "Inter";
   font-style: normal;
@@ -96,6 +97,7 @@
   color: #000000;
   margin-bottom: 10px;
 }
+
 .common-text-styling {
   font-family: "Inter";
   font-style: normal;
@@ -116,10 +118,15 @@
   margin-top: 20px;
   align-items: center;
   justify-content: center;
-  display: flex;
   background-color: #f2711c;
   cursor: pointer;
   padding: 0.78571429em 1.5em 0.78571429em;
   text-align: center;
   border-radius: 0.28571429rem;
+}
+
+.price-fare {
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 34px
 }

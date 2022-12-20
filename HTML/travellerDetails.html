@@ -4,50 +4,52 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Traveller Details </title>
+    <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.5.0/semantic.min.css" />
+  
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="../CSS/index.css">
     <link rel="stylesheet" href="../CSS/searchBus.css">
     <link rel="stylesheet" href="../CSS/travellerDetails.css">
 </head>
 
 <body>
-    <div class="container">
+    <div class="container-fluid">
         <!-- This div Container is holding navbar code -->
-        <div class="ui segment menu" style="margin-bottom:0px">
-            <div class="ui secondary menu" style="margin-left: 150px;">
-                <img src="../Media/Images/SiteLogo.svg" style="margin:10px 10px 0px 0px" />
-                <h1 class="logo">RESERVE</h1>
-                <a style="padding:30px;color: #000000" class="common-style-text">Tickets</a>
-                <a style="padding:30px;color: #000000" class="common-style-text">Contact us</a>
+        <nav class="d-flex mb-0 flex-row h-20 border border-2 rounded-1 ps-5">
+            <div class="d-flex mb-0 flex-row p-4 align-items-center ">
+                <img src="../Media/Images/SiteLogo.svg" class="pe-3" />
+                <h1 class="logo pe-5">RESERVE</h1>
+                <a class="common-style-text pe-5 text-decoration-none fw-bold">Tickets</a>
             </div>
-            <div class="right menu" style="margin-right:5%">
-                <div class="item">
-                    <span class="show-circle"></span>
-                    <div style="margin-left: 20px;" class="common-style-text">My Profile</div>
+            <div class="d-flex mb-0 flex-row-end ms-auto align-items-center me-3">
+                <div class="item fw-bold">
+                    <a class="common-style-text pe-5 text-decoration-none fw-bold">My Profile</a>
                 </div>
             </div>
-        </div>
+        </nav>
         <!-- End Of navbar code -->
 
         <div class="userSelection">
             <div class="selectedBusInfo">
                 <!-- This section is holding selected bus details-->
                 <div class="selectedBusDetails">
-                    <div class="booking-details">
+                    <div class="d-flex w-100">
                         <div class="bus-details-cards" style="width:100%;flex:none;height:fit-content;">
                             <div class="card-context-container">
-                                <div class="display-flex" style="flex-direction: column;padding:30px;">
-                                    <div class="card-text-style" style="margin:0px;">
-                                        <div class="common-text-style" style="display: flex;width: 37%;">IntrCity
+                                <div class="display-flex flex-column p-3">
+                                    <div class="card-text-style m-0" >
+                                        <div class="common-text-style d-flex">IntrCity
                                             Smart Bus
-                                            <div class="rating" style="margin: 0px 20px;">
+                                            <div class="rating m-0 ms-3 me-2">
                                                 <img src="../Media/Images/ratingStar.svg" />
-                                                <span style="margin:10px 5px">4.5</span>
+                                                <span class="mx-1 my-2">4.5</span>
                                             </div>
-                                            <span class="small-size-common-style anchor-style"
-                                                style="color: #A3A3A3;align-items: center;">Ratings</span>
+                                            <span class="small-size-common-style anchor-style dropdown-text align-items-center"
+                                                >Ratings</span>
                                         </div>
-                                        <p class="small-size-common-style vertical-pipe" style="margin-top: 10px;">
+                                        <p class="small-size-common-style vertical-pipe mt-1">
                                             A/C Sleeper
                                             (2+1) <span>| </span>24
                                             Seats Left <span>| </span> 0 Windows seat
@@ -55,19 +57,19 @@
                                         <div class="mid-size-common-style">
                                             <span>22:45, 16 NOV</span>
                                             <span class="horizontal-line"></span>
-                                            <span class="distance-hour" style="margin-left:50px">07 hrs 59
+                                            <span class="distance-hour ms-5" >07 hrs 59
                                                 min</span>
                                             <span class="horizontal-line"></span>
-                                            <span style="margin-left:50px">06:20, 17 NOV</span>
+                                            <span class="ms-5">06:20, 17 NOV</span>
                                             <!-- <div> -->
                                             <div class="state-container">
                                                 <div class="state-name">Purnea</div>
                                                 <div class="state-name">Babughat ( Kolkata)</div>
-                                                <div class="state-name" style="color: #A3A3A3;">Taxi Stand,
+                                                <div class="state-name dropdown-text">Taxi Stand,
                                                     Chitrabani
                                                     Road</div>
 
-                                                <div class="state-name" style="color: #A3A3A3;">Taxi Stand,
+                                                <div class="state-name dropdown-text">Taxi Stand,
                                                     Chitrabani
                                                     Road</div>
                                                 <!-- </div> -->
@@ -87,12 +89,12 @@
                         <div class="passenger">Passenger1</div>
                         <div class="seat">Seat <span>16</span></div>
                         <div class="three fields common-text-styling">
-                            <div class="field ">
-                                <label style="font-size: 16px;font-weight: 600">Name</label>
+                            <div class="field w-40">
+                                <label >Name</label>
                                 <input type="text">
                             </div>
-                            <div class="field" style="width:15%">
-                                <label style="font-size: 16px;font-weight: 600">Gender</label>
+                            <div class="field w-25">
+                                <label >Gender</label>
                                 <div class="ui selection dropdown" onclick="genderShow()">
                                     <div id="gender"></div>
                                     <i class="dropdown icon"></i>
@@ -102,19 +104,19 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="field" style="width:15%">
-                                <label style="font-size: 16px;font-weight: 600">Age (in yrs)</label>
+                            <div class="field w-25">
+                                <label >Age (in yrs)</label>
                                 <input type="text">
                             </div>
 
                         </div>
-                        <div class="two fields common-text-styling" style="font-size: 16px;font-weight: 600">
-                            <div class="field" style="width:33.33%">
-                                <label style="font-size: 16px;font-weight: 600">Email ID</label>
+                        <div class="two fields common-text-styling" >
+                            <div class="field w-40" >
+                                <label >Email ID</label>
                                 <input type="text">
                             </div>
-                            <div class="field" style="width:20%">
-                                <label style="font-size: 16px;font-weight: 600">Mobile No</label>
+                            <div class="field w-25" >
+                                <label >Mobile No</label>
                                 <input type="text">
                             </div>
 
@@ -124,52 +126,53 @@
                 <!-- End of traveller details form-->
             </div>
             <div class="busFare">
-                <b class="common-text-styling" style="font-size: 18px;line-height: 22px;">Fair
+                <b class="common-text-styling font-18">Fair
                     Details</b>
-                <div class="fare-container common-text-styling" style="font-weight: 500;margin-top: 20px;">
-                    <div class="fare">Base Fare</div>
+                <div class="fare-container common-text-styling mt-3" >
+                    <div class="fare fw-normal">Base Fare</div>
                     <div class="fare">₹ 799 </div>
-                    <div class="fare">Tax</div>
+                    <div class="fare fw-normal">Tax</div>
                     <div class="fare">₹ 150</div>
-                    <div class="fare">Offer Applied </div>
+                    <div class="fare fw-normal">Offer Applied </div>
                     <div class="fare">₹ 50</div>
                 </div>
                 <hr>
                 <div class="fare-container common-text-styling">
-                    <div class="fare">Total Price</div>
-                    <div class="fare" style="font-weight: 700;font-size: 28px;line-height: 34px;">₹ 899 </div>
+                    <div class="fare fw-normal">Total Price</div>
+                    <div class="fare price-fare">₹ 899 </div>
                 </div>
-                <div class="proceed-button">Proceed To Payment</div>
+                <div class="d-flex proceed-button">Proceed To Payment</div>
             </div>
 
         </div>
 
 
+
         <!-- This section is holding the footer-->
-        <div style="background: #ebebeb;">
+        <footer>
             <div class="footer-container">
-                <div class="" style="width: 100%;display:flex">
-                    <div class="left-container" style="margin: 30px;">
-                        <img src="../Media/Images/SiteLogo.svg" style="margin:10px 10px 0px 0px" />
+                <div class="w-100 d-flex">
+                    <div class="left-container m-3">
+                        <img src="../Media/Images/SiteLogo.svg" class="m-1" />
                         <span class="logo">
                             RESERVE
                         </span>
                         <p class="link-text">When you have a choice . Choose Reserve.</p>
-                        <p class="link-text">Reserve offers bus tickets booking through its website , IOS, and
-                            androis
-                            mobile apps for all
-                            mojnaor cities.</p>
+                        <p class="link-text">Reserve offers bus tickets booking through its website , IOS, and androis
+                            <br />mobile apps for all
+                            mojnaor cities.
+                        </p>
                         <a class="link-text">reserve.bus@reserve.com</a>
                     </div>
                     <div class="right-container">
                         <div class="about-us">About
-                            <div style="display: flex;flex-direction: column;">
+                            <div class="d-flex flex-column">
                                 <a class="link-text">Tickets</a>
                                 <a class="link-text">Contact us</a>
                             </div>
                         </div>
                         <div class="about-us">Useful Link
-                            <div style="display: flex;flex-direction: column;">
+                            <div class="d-flex flex-column">
                                 <a class="link-text">Careers</a>
                                 <a class="link-text">FAQ</a>
                                 <a class="link-text">T & C</a>
@@ -178,16 +181,16 @@
                             </div>
                         </div>
                         <div class="about-us">About
-                            <div><img src="../Media/Images/instagram.svg" style="margin:10px 10px 0px 0px" />
-                                <img src="../Media/Images/facebook.png" style="margin:10px 10px 0px 0px" />
+                            <div><img src="../Media/Images/instagram.svg" class="m-1" />
+                                <img src="../Media/Images/facebook.png" class="m-1" />
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
             <hr>
-            <div class="link-text" style="text-align:center;">All rights reserved - 2022 </div>
-        </div>
+            <div class="link-text align-center">All rights reserved - 2022 </div>
+        </footer>
         <!-- End of footer Section -->
     </div>
 
