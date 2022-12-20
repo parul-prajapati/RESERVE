@@ -1,6 +1,5 @@
 .ticket-container {
   display: flex;
-  height: 90em;
   column-gap: 30px;
   margin: 20px;
 }
@@ -34,7 +33,7 @@
   background: #ffffff;
   border: 1px solid #a3a3a3;
   border-radius: 8px;
-  height: 185px;
+  /* height: 185px; */
 }
 .card-context-container {
   display: flex;
