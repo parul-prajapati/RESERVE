@@ -1,6 +1,5 @@
 .ticket-container {
   display: flex;
-  height: 90em;
   column-gap: 30px;
   margin: 20px;
 }
@@ -34,7 +33,6 @@
   background: #ffffff;
   border: 1px solid #a3a3a3;
   border-radius: 8px;
-  height: 185px;
 }
 .card-context-container {
   display: flex;
@@ -181,7 +179,7 @@
 label,
 .checkbox,
 .radio {
-  margin: 5px 0px 15px 5px;
+  margin: 5px 0px 15px 4px;
   font-family: "Inter";
   font-style: normal;
   font-weight: 500;
