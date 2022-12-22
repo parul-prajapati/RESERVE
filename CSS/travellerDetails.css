@@ -80,7 +80,7 @@
 
 .travellerDetails label {
   font-size: 16px;
-  font-weight: 600
+  font-weight: 600;
 }
 
 .travellerDetails {
@@ -128,5 +128,162 @@
 .price-fare {
   font-weight: 700;
   font-size: 28px;
-  line-height: 34px
+  line-height: 34px;
+}
+.ui.form {
+  position: relative;
+  max-width: 100%;
+}
+.details {
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 20px 30px 30px 30px;
+}
+.ui.form .fields {
+  display: flex;
+  flex-direction: row;
+  margin: 0 -0.5em 1em;
+}
+.ui.form .fields > .field:first-child {
+  border-left: none;
+  box-shadow: none;
+}
+.ui.form .fields > .field {
+  flex: 0 1 auto;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+}
+.ui.form .fields .field {
+  clear: both;
+  margin: 0;
+}
+.ui.form .field > label {
+  display: block;
+  margin: 0 0 0.28571429rem 0;
+  color: rgba(0, 0, 0, 0.87);
+  font-size: 0.92857143em;
+  font-weight: 700;
+  text-transform: none;
+}
+label,
+.checkbox,
+.radio {
+  margin: 5px 0px 15px 5px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  color: #4d4d4d;
+}
+.ui.form input[type="text"] {
+  padding: 0.67857143em 1em;
+  font-size: 1em;
+  background: #fff;
+  border: 1px solid rgba(34, 36, 38, 0.15);
+  color: rgba(0, 0, 0, 0.87);
+  border-radius: 0.28571429rem;
+  box-shadow: 0 0 0 0 transparent inset;
+}
+.ui.selection.dropdown {
+  cursor: pointer;
+  word-wrap: break-word;
+  line-height: 1em;
+  white-space: normal;
+  outline: 0;
+  transform: rotateZ(0);
+  min-width: 14em;
+  min-height: 2.71428571em;
+  background: #fff;
+  display: inline-block;
+  padding: 0.78571429em 2.1em 0.78571429em 1em;
+  color: rgba(0, 0, 0, 0.87);
+  box-shadow: none;
+  border: 1px solid rgba(34, 36, 38, 0.15);
+  border-radius: 0.28571429rem;
+  transition: box-shadow 0.1s ease, width 0.1s ease;
+}
+.ui.dropdown .menu {
+  left: 0;
+}
+.ui.selection.dropdown > .dropdown.icon {
+  cursor: pointer;
+  position: absolute;
+  width: auto;
+  height: auto;
+  line-height: 1.21428571em;
+  top: 0.78571429em;
+  right: 1em;
+  z-index: 3;
+  margin: -0.78571429em;
+  padding: 0.91666667em;
+  opacity: 0.8;
+  transition: opacity 0.1s ease;
+}
+.ui.dropdown .menu > .item {
+  position: relative;
+  cursor: pointer;
+  display: block;
+  border: none;
+  height: auto;
+  text-align: left;
+  border-top: none;
+  line-height: 1em;
+  color: rgba(0, 0, 0, 0.87);
+  padding: 0.78571429rem 1.14285714rem !important;
+  font-size: 1rem;
+  text-transform: none;
+  font-weight: 400;
+  box-shadow: none;
+  -webkit-touch-callout: none;
+}
+.ui.dropdown > .dropdown.icon:before {
+  content: "\f0d7";
+}
+.ui.dropdown .menu {
+  cursor: auto;
+  position: absolute;
+  display: none;
+  outline: 0;
+  top: 100%;
+  min-width: -webkit-max-content;
+  min-width: -moz-max-content;
+  min-width: max-content;
+  margin: 0;
+  padding: 0 0;
+  background: #fff;
+  font-size: 1em;
+  text-shadow: none;
+  text-align: left;
+  box-shadow: 0 2px 3px 0 rgb(34 36 38 / 15%);
+  border: 1px solid rgba(34, 36, 38, 0.15);
+  border-radius: 0.28571429rem;
+  transition: opacity 0.1s ease;
+  z-index: 11;
+  will-change: transform, opacity;
+}
+.ui.selection.dropdown .menu {
+  overflow-x: hidden;
+  overflow-y: auto;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-overflow-scrolling: touch;
+  border-top-width: 0 !important;
+  width: auto;
+  outline: 0;
+  margin: 0 -1px;
+  min-width: calc(100% + 2px);
+  width: calc(100% + 2px);
+  border-radius: 0 0 0.28571429rem 0.28571429rem;
+  box-shadow: 0 2px 3px 0 rgb(34 36 38 / 15%);
+  transition: opacity 0.1s ease;
+}
+.ui.selection.dropdown .menu > .item {
+  border-top: 1px solid #fafafa;
+  padding: 0.78571429rem 1.14285714rem !important;
+  white-space: normal;
+  word-wrap: normal;
+}
+i.icon {
+  font-family: "Icons";
 }

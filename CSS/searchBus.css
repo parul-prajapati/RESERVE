@@ -15,7 +15,7 @@
   border-radius: 5px;
   padding: 10px;
 }
-.date-picker {
+.date-picker-container {
   display: flex;
   height: 4%;
   background: #fafafa;
@@ -206,4 +206,7 @@ label,
   padding-left: 10px;
   color: lightgray;
   padding-top: 2px;
+}
+.circle-color {
+  background: #d9d9d9;
 }
