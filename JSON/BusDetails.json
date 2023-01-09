@@ -1,0 +1,75 @@
+{
+    "busDetails": {
+        "selectedDate": [
+            {
+                "26": [
+                    {
+                        "name": "IntrCity Smart Bus",
+                        "category": "A/C Sleeper (2+1)",
+                        "totalSeats": 35,
+                        "availableSeats": "24 Seats Left",
+                        "windowSeatsAvailable": 10,
+                        "startTime": "22:45, 16 NOV",
+                        "dropTime": "06:20, 17 NOV",
+                        "busFare": "900"
+                    },
+                    {
+                        "name": "IntrCity Smart Bus",
+                        "category": "A/C Sleeper (2+1)",
+                        "totalSeats": 35,
+                        "availableSeats": "24 Seats Left",
+                        "windowSeatsAvailable": 10,
+                        "startTime": "22:45, 16 NOV",
+                        "dropTime": "06:20, 17 NOV",
+                        "busFare": "900"
+                    },
+                    {
+                        "name": "IntrCity Smart Bus",
+                        "category": "A/C Sleeper (2+1)",
+                        "totalSeats": 35,
+                        "availableSeats": "24 Seats Left",
+                        "windowSeatsAvailable": 10,
+                        "startTime": "22:45, 16 NOV",
+                        "dropTime": "06:20, 17 NOV",
+                        "busFare": "900"
+                    },
+                    {
+                        "name": "IntrCity Smart Bus",
+                        "category": "A/C Sleeper (2+1)",
+                        "totalSeats": 35,
+                        "availableSeats": "24 Seats Left",
+                        "windowSeatsAvailable": 10,
+                        "startTime": "22:45, 16 NOV",
+                        "dropTime": "06:20, 17 NOV",
+                        "busFare": "900"
+                    }
+                ],
+                "27": [
+                    {
+                        "name": "IntrCity Smart Bus",
+                        "category": "A/C Sleeper (2+1)",
+                        "totalSeats": 35,
+                        "availableSeats": "24 Seats Left",
+                        "windowSeatsAvailable": 10,
+                        "startTime": "22:45, 16 NOV",
+                        "dropTime": "06:20, 17 NOV",
+                        "busFare": "900"
+                    },
+                    {
+                        "name": "IntrCity Smart Bus",
+                        "category": "A/C Sleeper (2+1)",
+                        "totalSeats": 35,
+                        "availableSeats": "24 Seats Left",
+                        "windowSeatsAvailable": 10,
+                        "startTime": "22:45, 16 NOV",
+                        "dropTime": "06:20, 17 NOV",
+                        "busFare": "900"
+                    }
+                ],
+                "28": [
+                    {}
+                ]
+            }
+        ]
+    }
+}

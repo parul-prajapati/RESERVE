@@ -1,0 +1,68 @@
+{
+    "location": {
+        "From": [
+            {
+                "state": "Delhi",
+                "city": "New Delhi",
+                "country": "India"
+            },
+            {
+                "state": "Uttar Pradesh",
+                "city": "Kanpur",
+                "country": "India"
+            },
+            {
+                "state": "Uttar Pradesh",
+                "city": "Lucknow",
+                "country": "India"
+            },
+            {
+                "state": "West Bengal",
+                "city": "Kolkata",
+                "country": "India"
+            },
+            {
+                "state": "Uttar Pradesh",
+                "city": "Agra",
+                "country": "India"
+            },
+            {
+                "state": "Rajasthan",
+                "city": "Jaipur",
+                "country": "India"
+            }
+        ],
+        "To": [
+            {
+                "state": "Delhi",
+                "city": "New Delhi",
+                "country": "India"
+            },
+            {
+                "state": "Uttar Pradesh",
+                "city": "Kanpur",
+                "country": "India"
+            },
+            {
+                "state": "Uttar Pradesh",
+                "city": "Lucknow",
+                "country": "India"
+            },
+            {
+                "state": "West Bengal",
+                "city": "Kolkata",
+                "country": "India"
+            },
+            {
+                "state": "Uttar Pradesh",
+                "city": "Agra",
+                "country": "India"
+            },
+            {
+                "state": "Rajasthan",
+                "city": "Jaipur",
+                "country": "India"
+            }
+        ]
+    }
+}

@@ -1,0 +1,25 @@
+{
+    "feedback": [
+        {
+            "username": "Vatsal Agrawal",
+            "profileImage": "http://xyz.com",
+            "joiningYear": "2020",
+            "ratings": "4.5",
+            "comment": "Awesome travel experience with reserve. Excellent staff"
+        },
+        {
+            "username": "Vanya Agrawal",
+            "profileImage": "http://xyz.com",
+            "joiningYear": "2019",
+            "ratings": "4.2",
+            "comment": "Amazing service . Always a best time with reserve"
+        },
+        {
+            "username": "Seema Agrawal",
+            "profileImage": "",
+            "joiningYear": "2018",
+            "ratings": "4.1",
+            "comment": "Bus was clean and the journey was smooth. Reached on time"
+        }
+    ]
+}
